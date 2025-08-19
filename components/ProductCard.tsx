@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { 
   Play, 
   Pause, 
@@ -107,9 +108,11 @@ export default function ProductCard({ product, isPlaying, onPlay, onAddToCart }:
 
       {/* Product Info */}
       <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">
-          {product.title}
-        </h3>
+        <Link href={`/product/${product.id}`}>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-primary-600 transition-colors duration-200 cursor-pointer">
+            {product.title}
+          </h3>
+        </Link>
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">
           {product.description}
         </p>
