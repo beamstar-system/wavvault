@@ -72,9 +72,9 @@ export default function Header() {
                 </motion.div>
               )}
             </Link>
-            <button className="p-2 text-gray-600 hover:text-primary-600 transition-colors duration-200">
+            <Link href="/dashboard" className="p-2 text-gray-600 hover:text-primary-600 transition-colors duration-200">
               <User className="h-5 w-5" />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}

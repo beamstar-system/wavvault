@@ -168,23 +168,13 @@ export default function CartPage() {
                 </div>
               </div>
 
-              <button
-                onClick={handleCheckout}
-                disabled={isCheckingOut}
-                className="w-full btn-primary flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              <Link
+                href="/checkout"
+                className="w-full btn-primary flex items-center justify-center space-x-2"
               >
-                {isCheckingOut ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                    <span>Processing...</span>
-                  </>
-                ) : (
-                  <>
-                    <CreditCard className="h-4 w-4" />
-                    <span>Proceed to Checkout</span>
-                  </>
-                )}
-              </button>
+                <CreditCard className="h-4 w-4" />
+                <span>Proceed to Checkout</span>
+              </Link>
 
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">
